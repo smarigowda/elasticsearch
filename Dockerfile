@@ -15,6 +15,8 @@ RUN \
   rm -f elasticsearch-1.2.1.tar.gz && \
   mv /tmp/elasticsearch-1.2.1 /elasticsearch
 
+RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head
+
 # Define mountable directories.
 VOLUME ["/data"]
 
